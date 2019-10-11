@@ -1,0 +1,17 @@
+ul {
+        list-style: none;
+        margin: 0px;
+    }
+
+    .ele {
+        width: 100px;
+        height: 40px;
+        border: 1px solid #999;
+        background: #EA6E59;
+        margin-top: 0px;
+        margin-left: 0px;
+        border-radius: 10px;
+        padding-left: 10px;
+        color: white;
+        cursor: move;
+    }

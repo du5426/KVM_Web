@@ -77,7 +77,7 @@
 
             <!--sidebar nav start-->
             <ul class="nav nav-pills nav-stacked custom-nav">
-                <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>主页列表</span></a></li>
+                <li class="active"><a href="{% url 'index' %}"><i class="fa fa-home"></i> <span>主页列表</span></a></li>
                 <li class="menu-list"><a href=""><i class="fa fa-laptop"></i> <span>设备配置</span></a>
                     <ul class="sub-menu-list">
                         <li><a href="blank_page.html">发送端配置</a></li>
@@ -97,14 +97,7 @@
                         <!--<li><a href="panels.html"> Panels</a></li>-->
                     </ul>
                 </li>
-                <li class="menu-list"><a href=""><i class="fa fa-cogs"></i> <span>房间管理</span></a>
-                    <ul class="sub-menu-list">
-                        <!--<li><a href="grids.html"> Grids</a></li>-->
-                        <!--<li><a href="gallery.html"> Media Gallery</a></li>-->
-                        <!--<li><a href="calendar.html"> Calendar</a></li>-->
-                        <!--<li><a href="tree_view.html"> Tree View</a></li>-->
-                        <!--<li><a href="nestable.html"> Nestable</a></li>-->
-                    </ul>
+                <li><a href="{% url 'roomManage' %}"><i class="fa fa-cogs"></i> <span>房间管理</span></a>
                 </li>
 
                 <!--<li><a href="fontawesome.html"><i class="fa fa-bullhorn"></i> <span>拼接设置</span></a></li>-->

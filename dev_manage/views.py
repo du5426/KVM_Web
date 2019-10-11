@@ -108,3 +108,10 @@ def index(request):
 
     return render(request,'index.html',{'post_list':post_list})
 
+
+
+def roomManage(request):
+
+    return render(request,"roomManage.html")
+
+

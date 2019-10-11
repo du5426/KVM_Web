@@ -23,6 +23,7 @@ from dev_manage import views as dev_manage_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',dev_manage_views.index,name='index'),
+    url(r'^roomManage',dev_manage_views.roomManage,name='roomManage'),
 
     url(r'^(?P<path>.*)$', serve, {'document_root': 'dev_manage/template_static'}),    #设置静态文件路径（不使用{% static %}）
 

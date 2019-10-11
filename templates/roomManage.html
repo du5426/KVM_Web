@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+<!------------------------------------------------------------------->
+
+{% block CSS_Link %}
+    <link href="css/roomManage.css" rel="stylesheet" />
+{% endblock %}
+
+<!------------------------------------------------------------------->
+
+{% block main-content %}
+
+<ul id="container">
+        <li class="ele" id="test" draggable="true" onmousemove="show(event);">1</li>
+</ul>
+
+<p id="before_text"> before_text </p>
+<p id="before_margin_text"> before_margin_text </p>
+
+<p id="after_text"> after_text </p>
+<p id="after_margin_text"> after_margin_text </p>
+
+<p id="offset_text"> offset_text </p>
+
+
+{% endblock %}
+
+<!------------------------------------------------------------------>
+
+{% block JS_Fun %}
+
+<script src="js/room-Manage.js"></script>
+
+{% endblock %}
+
