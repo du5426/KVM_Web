@@ -1,6 +1,21 @@
-ul {
+    .room_div {
         list-style: none;
-        margin: 0px;
+        background-color:white;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right:10px;
+        width:1650px;
+        height:700px;
+        position: absolute;
+    }
+
+    .drop_div {
+        float: left;
+        width: 200px;
+        height: 100px;
+        margin: 50px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
     }
 
     .ele {
@@ -8,10 +23,15 @@ ul {
         height: 40px;
         border: 1px solid #999;
         background: #EA6E59;
-        margin-top: 0px;
-        margin-left: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
         border-radius: 10px;
         padding-left: 10px;
         color: white;
         cursor: move;
+    }
+
+    .debug_text{
+        margin-bottom: 10px;
+        margin-left: 10px;
     }

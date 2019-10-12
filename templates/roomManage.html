@@ -10,18 +10,26 @@
 
 {% block main-content %}
 
-<ul id="container">
+<div class="room_div">
+
+    <div class="drop_div">
         <li class="ele" id="test" draggable="true" onmousemove="show(event);">1</li>
-</ul>
+    </div>
 
-<p id="before_text"> before_text </p>
-<p id="before_margin_text"> before_margin_text </p>
+    <div class="drop_div">
 
-<p id="after_text"> after_text </p>
-<p id="after_margin_text"> after_margin_text </p>
+    </div>
 
-<p id="offset_text"> offset_text </p>
 
+
+    <p class="debug_text" id="before_text"> before_text </p>
+    <p class="debug_text" id="before_margin_text"> before_margin_text </p>
+
+    <p class="debug_text" id="after_text"> after_text </p>
+    <p class="debug_text" id="after_margin_text"> after_margin_text </p>
+
+    <p class="debug_text" id="offset_text"> offset_text </p>
+</div>
 
 {% endblock %}
 

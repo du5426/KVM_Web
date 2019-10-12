@@ -39,9 +39,15 @@ document.addEventListener("dragstart", function(event) {
     //event.target.style.opacity = "0.2";
 });
 
+// 默认情况下,数据/元素不能在其他元素中被拖放。对于drop我们必须防止元素的默认处理
+document.addEventListener("dragover",function(event){
+    event.preventDefault();
+});
+
 document.addEventListener("dragend", function(event) {
     //dataTransfer.setData()方法设置数据类型和拖动的数据
 	var e = event;
+
     mouseOver(event);
 
     var testDiv = document.getElementById("test");
@@ -72,8 +78,13 @@ function mouseOver(obj){
     mouseY = e.layerY||e.offsetY;
 };
 
-//function show(event) {
+//document.addEventListener("drop",function(event){
+//    event.preventDefault();
 //
-// mouseOver(event);
-//  document.getElementById("test").innerHTML = mouseX+" "+mouseY ;
-//};
+//    if(event.target.className=="drop_div")
+//    {
+//        var data = event.dataTransfer.getData("Text");
+//        event.target.appendChild(document.getElementById(data));
+//    }
+//
+//});
