@@ -3,19 +3,16 @@ from dev_manage.models import NodeInfo
 import re
 import os
 from django.db.models import Max
-import socket
 
-from threading import Timer
-
-from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
     # server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    # 数据库中所有设备的状态置为 “离线”
+    # 初始化数据库中所有设备的状态置为 “离线”
     node_list = NodeInfo.objects.all()
 
+    # RxNode_InfoFile.txt 文件
     #当存储接收端编号的文件存在时只需要更新数据库中的离线状态
     if os.access("../RxNode_InfoFile.txt", os.F_OK):
         for node in node_list:
@@ -29,6 +26,7 @@ def index(request):
                     rf.write("Num_" + node.node_Num + "  MAC = " + node.node_MAC + "\n")
             node.save()
 
+    # Search_DevList文件中存储服务器搜索设备后的结果
     if os.access("../Search_DevList.txt",os.F_OK):
         print("Open the Search_DevList.txt")
         # 读取项目文件夹上层文件夹的MacList_Rx.txt，其中存储Qt程序读取到的设备信息
@@ -108,10 +106,10 @@ def index(request):
 
     return render(request,'index.html',{'post_list':post_list})
 
-
-
 def roomManage(request):
 
-    return render(request,"roomManage.html")
+    post_list = NodeInfo.objects.all()
+
+    return render(request,"roomManage.html",{'post_list':post_list})
 
 

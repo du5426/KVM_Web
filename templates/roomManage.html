@@ -10,25 +10,23 @@
 
 {% block main-content %}
 
+<div class="node_list">
+    {% for post in post_list %}
+        {% if post.node_Type == 'Client' %}
+        <div class="node_cell" id="RX_{{post.node_Num}}" draggable="true"> Rx_00{{post.node_Num}} </div>
+        {% endif %}
+    {% endfor %}
+</div>
+
 <div class="room_div">
 
     <div class="drop_div">
-        <li class="ele" id="test" draggable="true" onmousemove="show(event);">1</li>
+        <div> 一级权限 </div>
     </div>
 
     <div class="drop_div">
-
+        <div> 二级权限 </div>
     </div>
-
-
-
-    <p class="debug_text" id="before_text"> before_text </p>
-    <p class="debug_text" id="before_margin_text"> before_margin_text </p>
-
-    <p class="debug_text" id="after_text"> after_text </p>
-    <p class="debug_text" id="after_margin_text"> after_margin_text </p>
-
-    <p class="debug_text" id="offset_text"> offset_text </p>
 </div>
 
 {% endblock %}
